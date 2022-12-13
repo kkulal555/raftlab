@@ -16,9 +16,22 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+function containsAnyLetters(str) {
+    return /[A-H]/i.test(str);
+}
+function containsAnyNumber(str) {
+    return /[1-8]/i.test(str);
+}
 // Ask the user for the Knight's position
 rl.question('Enter the position of the Knight (e.g. A1): ', (position) => {
     // Parse the input to get the row and column
+    position = position.toUpperCase();
+    if (containsAnyLetters(position.charAt(0)) !== true || containsAnyNumber(position.charAt(1)) !== true || position.charAt(1) > 8 || Boolean(position.charAt(2)) === true || position.length >2 || position.length <2 ) {
+        console.log('Invalid position');
+        rl.close();
+        return
+    };
+    
     const row = BOARD_SIZE - parseInt(position[1]);
     const col = position.charCodeAt(0) - 'A'.charCodeAt(0);
 

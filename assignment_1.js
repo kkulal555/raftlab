@@ -1,10 +1,10 @@
-// Please read readme to run this script
+// Refer README to run this script
 
 // imports 
 const fs = require('fs');
 const json2csv = require('json2csv').Parser;
 const parser = new json2csv();
-const { csv_to_json, fetch, find_by, print_all_books_and_magazines, sort_by } = require('./src/function/helper');
+const { fetch, find_by, print_all_books_and_magazines, sort_by } = require('./src/function/helper');
 
 // reference urls in array
 let url = ['https://raw.githubusercontent.com/echocat/nodejs-kata-1/master/data/authors.csv', 'https://raw.githubusercontent.com/echocat/nodejs-kata-1/master/data/books.csv', 'https://raw.githubusercontent.com/echocat/nodejs-kata-1/master/data/magazines.csv'];
@@ -80,10 +80,10 @@ const task6 = async () => {
             title: 'Raftlab_magazine',
             isbn: '13-12-2022',
             authors: 'letsHirehim@raftlab.com',
-            description: 'Find your self a guy who can make this work in OUR way'
+            description: 'You are hiring a guy who can take Raftlabs to the next level'
         })
         const csvData = parser.parse(respon);
-        fs.writeFile('/src/output/raftlabs.csv', csvData,function (err,res){
+        fs.writeFile('./src/output/raftlabs.csv', csvData,function (err,res){
             console.log('File saved in src > output\n\n==============| task6 ended here |============\n');
         });
     })
@@ -98,3 +98,5 @@ const caller =async()=>{
     await task6();
 }
 caller()
+
+// task6()
