@@ -5,7 +5,8 @@
   "main": "assignment_1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "1": "node assignment_1.js"
+    "1": "node assignment_1.js",
+    "2": "node Assignment_2.js"
   },
   "repository": {
     "type": "git",

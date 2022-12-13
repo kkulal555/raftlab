@@ -88,4 +88,13 @@ const task6 = async () => {
         });
     })
 }
-task6();
+
+const caller =async()=>{
+    await task1();
+    await task2();
+    await task3();
+    await task4();
+    await task5();
+    await task6();
+}
+caller()
