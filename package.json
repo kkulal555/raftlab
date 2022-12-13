@@ -1,0 +1,24 @@
+{
+  "name": "raftlab",
+  "version": "1.0.0",
+  "description": "Assignment for raftlab",
+  "main": "assignment_1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "1": "node assignment_1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kkulal555: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@github.com/kkulal555/raftlab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkulal555/raftlab/issues"
+  },
+  "homepage": "https://github.com/kkulal555/raftlab#readme",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "json2csv": "^5.0.7"
+  }
+}
